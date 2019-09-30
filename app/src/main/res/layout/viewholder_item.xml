@@ -7,6 +7,7 @@
 
     <TextView
         android:id="@+id/item_name"
+        android:text="Nombre del ítem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="24sp"
@@ -14,6 +15,7 @@
 
     <TextView
         android:id="@+id/item_desc"
+        android:text="Descripción del ítem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

@@ -15,7 +15,7 @@ public class DetailActivity extends AppCompatActivity {
 
         int position = getIntent().getIntExtra("ITEM_POSITION", 0);
 
-        final Item item = ItemList.itemList.get(position);
+        Item item = ItemList.itemList.get(position);
 
         TextView textViewName = findViewById(R.id.name);
         TextView textViewDesc = findViewById(R.id.desc);

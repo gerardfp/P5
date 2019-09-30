@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         ItemViewHolder(@NonNull View itemView) {
             super(itemView);
+
             name = itemView.findViewById(R.id.item_name);
             desc = itemView.findViewById(R.id.item_desc);
             rating = itemView.findViewById(R.id.item_rating);
@@ -50,7 +51,9 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(@NonNull ItemViewHolder holder, final int position) {
+
             final Item item = ItemList.itemList.get(position);
+
             holder.name.setText(item.name);
             holder.desc.setText(item.desc);
             holder.rating.setRating(item.rating);
