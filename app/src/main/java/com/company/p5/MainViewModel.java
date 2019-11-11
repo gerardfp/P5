@@ -1,14 +1,22 @@
 package com.company.p5;
 
-import android.util.Log;
+import android.app.Application;
 
 import java.util.ArrayList;
 import java.util.List;
 
-class Dataset {
-    static List<Item> itemList = new ArrayList<>();
+import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
 
-    static {
+public class MainViewModel extends AndroidViewModel {
+
+
+    List<Item> itemList = new ArrayList<>();
+    public int selectedItem = 0;
+
+    public MainViewModel(@NonNull Application application) {
+        super(application);
+
         for (int i = 0; i < 200; i++) {
             Item item = new Item();
             item.name = "Item " + i;
