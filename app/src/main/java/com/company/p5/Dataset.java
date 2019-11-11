@@ -5,7 +5,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
-class ItemList {
+class Dataset {
     static List<Item> itemList = new ArrayList<>();
 
     static {

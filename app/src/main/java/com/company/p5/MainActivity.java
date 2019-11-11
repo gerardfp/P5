@@ -22,9 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         RecyclerView recyclerView = findViewById(R.id.item_list);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.addItemDecoration(new DividerItemDecoration(recyclerView.getContext(), layoutManager.getOrientation()));
+        recyclerView.addItemDecoration(new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL));
         recyclerView.setAdapter(new ItemsAdapter());
     }
 
@@ -52,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(@NonNull ItemViewHolder holder, final int position) {
 
-            final Item item = ItemList.itemList.get(position);
+            final Item item = Dataset.itemList.get(position);
 
             holder.name.setText(item.name);
             holder.desc.setText(item.desc);
@@ -77,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getItemCount() {
-            return ItemList.itemList.size();
+            return Dataset.itemList.size();
         }
     }
 }
